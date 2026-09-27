@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragola Postres</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img class="logo-icon" src="img/Fragola-logo.jpeg" alt="Logo Fragola">
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="catalogo.html" class="nav-link">
+                        Catálogo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobreNosotros.html" class="nav-link">
+                        Sobre Nosotros
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+
+            <a class="cta-button" href="whatsapp.html">
+                <i class="ti ti-phone icon"></i> Contáctanos
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECCIÓN PORTADA (FLEXBOX A DOS COLUMNAS) -->
+        <section class="portada">
+            <div class="contenedor dos-columnas">
+                <div class="columna-texto">
+                    <h1>Postres hechos con amor</h1>
+                    <p>Endulzamos tus momentos especiales con recetas únicas y de la más alta calidad.</p>
+                    <div class="portada-botones">
+                        <a href="catalogo.html" class="boton-primario">Ver Catálogo</a>
+                        <a href="https://wa.me/TUNUMERO" target="_blank" class="boton-secundario">Cotizar Evento</a>
+                    </div>
+                </div>
+                <div class="columna-imagen">
+                    <img src="../img/postre-1.png" alt="Pastel destacado Fragola">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DESTACADOS (3 TARJETAS EN FILA HORIZONTAL) -->
+        <section class="destacados">
+            <div class="contenedor">
+                <div class="destacados-encabezado">
+                    <h2>Nuestros favoritos</h2>
+                    <p>Los postres más pedidos y amados por nuestros clientes</p>
+                </div>
+
+                <!-- CONTENEDOR EN FILA HORIZONTAL -->
+                <div class="fila-destacados">
+                    <!-- Tarjeta 1 -->
+                    <article class="tarjeta">
+                        <div class="tarjeta-imagen">
+                            <span class="etiqueta-tarjeta">Popular</span>
+                            <img src="../img/postre-9.png" alt="Donas decoradas">
+                        </div>
+                        <div class="tarjeta-contenido">
+                            <span class="tarjeta-categoria">Especialidad</span>
+                            <h3>Donas decoradas</h3>
+                            <p>Caja de donas esponjosas con glaseado artesanal en tonos pastel y chispas de colores.</p>
+                            <div class="tarjeta-pie">
+                                <span class="precio">$22.00</span>
+                                <a href="catalogo.html" class="boton-tarjeta">Ver más</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2 -->
+                    <article class="tarjeta">
+                        <div class="tarjeta-imagen">
+                            <span class="etiqueta-tarjeta">Favorito</span>
+                            <img src="../img/postre-3.png" alt="Pastel de cumpleaños">
+                        </div>
+                        <div class="tarjeta-contenido">
+                            <span class="tarjeta-categoria">Pasteles</span>
+                            <h3>Pastel Vintage</h3>
+                            <p>Bizcocho suave relleno de crema pastelera decorado con detalles clásicos artesanales.</p>
+                            <div class="tarjeta-pie">
+                                <span class="precio">$18.50</span>
+                                <a href="catalogo.html" class="boton-tarjeta">Ver más</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3 -->
+                    <article class="tarjeta">
+                        <div class="tarjeta-imagen">
+                            <span class="etiqueta-tarjeta">Nuevo</span>
+                            <img src="../img/postre-5.png" alt="Galletas artesanales">
+                        </div>
+                        <div class="tarjeta-contenido">
+                            <span class="tarjeta-categoria">Galletas</span>
+                            <h3>Macarons Florales</h3>
+                            <p>Delicados macarons franceses pintados a mano con rellenos florales y frutales.</p>
+                            <div class="tarjeta-pie">
+                                <span class="precio">$10.40</span>
+                                <a href="catalogo.html" class="boton-tarjeta">Ver más</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="destacados-boton-final">
+                    <a href="catalogo.html" class="cta-button">Explora todo el menú</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="eventos">
+            <div class="contenedor dos-columnas">
+                <div class="columna-imagen">
+                    <img src="../img/postre-4.png" alt="Imagen de una mesa con pasteles">
+                </div>
+                <div class="columna-texto">
+                    <h2>Mesas Dulces y Fiestas Especiales</h2>
+                    <p>Hacemos de tu evento un bonito recuerdo</p>
+                    <p>Diseñamos barras y estaciones de postres personalizadas para bodas, cumpleaños y eventos corporativos</p>
+                    
+                    <ul class="lista-beneficios">
+                        <li>
+                            <span>Diseños personalizados segun la tematica de tu celebracion</span>
+                        </li>
+                        <li>
+                            <span>Variedad de porciones individuales, shots gourmet y pasteles centrales</span>
+                        </li>
+                        <li>
+                            Montaje completo en el lugar del evento y asesoría de cantidades
+                        </li>
+                    </ul>
+
+                    <a href="#Whatsapp" class="boton-whatsapp">Cotizar montaje</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sucursales">
+            <div class="contenedor">
+                <div class="destacados-encabezado">
+                    <h2>Nuestras Sucursales</h2>
+                    <p>Visitanos para retirar tus pedidos o disfrutar de un momento dulce</p>
+                </div>
+
+                <div class="fila-sucursales">
+                    <article class="tarjeta-sucursal">
+                        <h3>Fragola La Mascota</h3>
+                        <p class="sucursal-direccion">
+                            Calle La Mascota, Avenida El Almendro, Plaza La Mascota, Segundo nivel, Local D.
+                        </p>
+                        <div class="sucursal-horario">
+                            <p><strong>Lunes a Viernes:</strong> 8:00 am - 5:30 pm</p>
+                            <p><strong>Sábados:</strong> 7:00 am - 1:00 pm</p>
+                        </div>
+                        <a href="#GoogleMaps" target="_blank" class="boton-mapa">
+                            Ver en Google Maps
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-sucursal">
+                        <h3>Fragola Epic Plaza</h3>
+                        <p class="sucursal-direccion">
+                            Centro Comercial Epic Plaza, Sótano 1, Avenida Bellavista, Col. Santa Elena.
+                        </p>
+                        <div class="sucursal-horario">
+                            <p><strong>Lunes a Viernes:</strong> 10:00 am - 6:00 pm</p>
+                            <p><strong>Sábados:</strong> 9:00 am - 6:00 pm</p>
+                            <p><strong>Domingos:</strong> 10:00 am - 4:00 pm</p>
+                        </div>
+                        <a href="#GoogleMaps" target="_blank" class="boton-mapa">
+                            Ver en Google Maps
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor fila-pie">
+            <div class="columna-pie">
+                <img class="logo-fragola-pie" src="img/Fragola-logo.jpeg" alt="logo Fragola">
+                <p>Repostería artesanal creada con pasión para llenar de dulzura tus momentos más especiales</p>
+            </div>
+
+            <div class="columna-pie">
+                <h4>Navegación</h4>
+                <ul class="enlaces-pie">
+                    <li><a href="index.html"><i class="ti ti-chevron-right"></i>Inicio</a></li>
+                    <li><a href="catalogo.html"><i class="ti ti-chevron-right"></i>Catálogo</a></li>
+                    <li><a href="sobreNosotros.html"><i class="ti ti-chevron-right"></i>Sobre Nosotros</a></li>
+                    <li><a href="contacto.html"><i class="ti ti-chevron-right"></i>Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="columna-pie contacto-pie">
+                <h4>Atención y Pedidos</h4>
+                <ul class="lista-contacto-pie">
+                    <li>
+                        <i class="ti ti-brand-whatsapp icono-pie"></i>
+                        <a href="#numeroWhatsapp" target="_blank">+503 0000-0000</a>
+                    </li>
+                    <li>
+                        <i class="ti ti-brand-instagram icono-pie"></i>
+                        <a href="https://www.instagram.com/fragola.postres" target="_blank">@fragola.postres</a>
+                    </li>
+                    <li>
+                        <i class="ti ti-map-pin icono-pie"></i>
+                        <span>La Mascota & Epic Plaza</span>
+                    </li>
+                    <li>
+                        <i class="ti ti-clock icono-pie"></i>
+                        <span>Encargos con 48h de anticipación</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pie-derechos">
+            <p>2026 Fragola Postres - Proyecto de Desarrollo Web</p>
+        </div>
+    </footer>
+</body>
+
+</html>
