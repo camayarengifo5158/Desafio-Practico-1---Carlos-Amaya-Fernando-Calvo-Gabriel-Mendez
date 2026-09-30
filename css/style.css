@@ -1,0 +1,516 @@
+/* FRAGOLA - Version adaptada a las guias 1, 2 y 3.
+   Colores y fuentes: guias 1 y 2.
+   Distribucion flexible: guia 3, paginas 6-10 y 16-20.
+   El archivo LEEME.txt relaciona las tecnicas con las guias. */
+
+/* 1. Paleta inspirada en el logo original: fucsia, rosa y dorado.
+   Rosa claro como fondo; dorado solo para detalles decorativos.
+   Variables y estilos generales: guia 2, pagina 10. */
+:root {
+    --fucsia: #d91661;
+    --rosa: #e99aaf;
+    --rosa-claro: #fff1f5;
+    --dorado: #bf9b38;
+    --blanco: #ffffff;
+    --texto: #503d43;
+    --borde-claro: rgba(191, 155, 56, 0.45);
+    --borde-suave: rgba(233, 154, 175, 0.5);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --mono: 'IBM Plex Mono', monospace;
+    --fuente-menu: 'Raleway', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--blanco);
+    color: var(--fucsia);
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--fucsia);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+/* Porcentaje + limite de ancho, como en la guia 3, pagina 16. */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobretitulo {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.6;
+}
+
+/* 2. Navegacion flexible: los enlaces pueden pasar a otra fila. */
+.cabecera {
+    background-color: var(--blanco);
+}
+
+.portada {
+    background-color: var(--rosa-claro);
+    color: var(--fucsia);
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--borde-claro);
+}
+
+.logo {
+    display: inline-block;
+    width: 140px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 23px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+/* Raleway: aproximacion visual al logo desde Google Fonts.
+   font-family y font-weight: guia 1. */
+.nav-menu a,
+.enlaces-pie a {
+    font-family: var(--fuente-menu);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-menu a {
+    display: inline-block;
+    padding: 8px 0;
+}
+
+.nav-menu .activo {
+    text-decoration: underline;
+}
+
+.boton-navegacion {
+    font-size: 14px;
+}
+
+.cabecera a,
+.portada a,
+.pie a {
+    color: var(--fucsia);
+}
+
+/* 3. Botones: bordes redondeados y transicion sencilla.
+   position y top: guia 3. transition: guia 3, paginas 27-29. */
+.cta-button,
+.boton-primario,
+.boton-whatsapp,
+.boton-mapa,
+.boton-tarjeta {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    padding: 14px 26px;
+    border: 1px solid var(--fucsia);
+    border-radius: 999px;
+    font-family: var(--serif);
+    line-height: 1.3;
+    text-align: center;
+    transition: top 0.3s;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible,
+.boton-primario:hover,
+.boton-primario:focus-visible,
+.boton-whatsapp:hover,
+.boton-whatsapp:focus-visible,
+.boton-mapa:hover,
+.boton-mapa:focus-visible,
+.boton-tarjeta:hover,
+.boton-tarjeta:focus-visible {
+    top: -3px;
+}
+
+.cabecera .cta-button,
+.portada .boton-primario {
+    border-color: var(--fucsia);
+}
+
+/* 4. Portada: flex-wrap sustituye los cambios mediante @media. */
+.portada-interior {
+    padding-top: 52px;
+}
+
+.portada-interior > .sobretitulo {
+    text-align: center;
+}
+
+.portada-centro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    padding: 42px 0 32px;
+}
+
+h1 {
+    flex: 1 1 480px;
+    font-size: 4rem;
+    letter-spacing: -2px;
+}
+
+.titulo-cursiva {
+    font-style: italic;
+}
+
+.portada-ilustracion {
+    flex: 1 1 280px;
+    max-width: 340px;
+}
+
+.portada-inferior {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding: 12px 0 48px;
+}
+
+.portada-inferior > p {
+    flex: 1 1 300px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.portada-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.enlace-simple {
+    font-size: 14px;
+}
+
+.seguir {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    border-top: 1px solid var(--borde-claro);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.seguir span {
+    font-size: 22px;
+}
+
+/* 5. Favoritos: tarjetas flexibles, guia 3, paginas 18-20. */
+.destacados {
+    padding: 80px 0;
+}
+
+.destacados-encabezado {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.destacados-encabezado .sobretitulo {
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+
+.descripcion-seccion {
+    margin-top: 20px;
+    color: var(--texto);
+}
+
+.fila-destacados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    max-width: 380px;
+}
+
+/* La etiqueta absoluta toma la foto como referencia (guia 3, p. 22). */
+.tarjeta-imagen {
+    position: relative;
+}
+
+.tarjeta-imagen img {
+    height: 360px;
+    object-fit: cover;
+}
+
+.etiqueta-tarjeta {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1;
+    padding: 5px 13px;
+    background-color: var(--rosa-claro);
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.tarjeta-contenido {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 24px;
+}
+
+.tarjeta-categoria {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.tarjeta-contenido > p {
+    margin: 16px 0 24px;
+    color: var(--texto);
+    font-size: 16px;
+}
+
+/* El margen automatico alinea los precios al final de la tarjeta. */
+.tarjeta-pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--dorado);
+}
+
+.precio {
+    font-family: var(--mono);
+    font-size: 16px;
+}
+
+.boton-tarjeta {
+    padding: 9px 20px;
+    font-size: 14px;
+}
+
+.destacados-boton-final {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.nota-fotos {
+    margin-top: 20px;
+    color: var(--texto);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* 6. Eventos: dos columnas cuando caben, una cuando falta espacio. */
+.eventos {
+    padding-bottom: 80px;
+}
+
+.dos-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 48px;
+}
+
+.dos-columnas > div {
+    flex: 1 1 300px;
+}
+
+.eventos .columna-imagen img {
+    height: 520px;
+    object-fit: cover;
+}
+
+.eventos .sobretitulo {
+    margin-bottom: 24px;
+}
+
+.eventos h2 {
+    max-width: 460px;
+}
+
+.descripcion-evento {
+    margin-top: 22px;
+    color: var(--texto);
+}
+
+.lista-beneficios {
+    margin: 28px 0;
+    padding-left: 20px;
+    color: var(--texto);
+    font-size: 15px;
+}
+
+.lista-beneficios li {
+    padding: 13px 0;
+    border-top: 1px solid var(--borde-suave);
+}
+
+/* 7. Sucursales y pie de pagina. */
+.sucursales {
+    padding: 80px 0;
+    border-top: 1px solid var(--dorado);
+}
+
+.fila-sucursales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+.tarjeta-sucursal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 300px;
+    padding-top: 20px;
+    border-top: 1px solid var(--dorado);
+}
+
+.sucursal-direccion {
+    max-width: 440px;
+    margin-top: 18px;
+    color: var(--texto);
+}
+
+.sucursal-horario {
+    margin: 24px 0 28px;
+    color: var(--texto);
+    font-family: var(--mono);
+    font-size: 12px;
+}
+
+.sucursal-horario strong {
+    font-weight: 400;
+}
+
+.boton-mapa {
+    margin-top: auto;
+    font-size: 14px;
+}
+
+.pie {
+    padding-top: 48px;
+    background-color: var(--blanco);
+    color: var(--texto);
+    border-top: 1px solid var(--dorado);
+}
+
+.fila-pie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding-bottom: 56px;
+}
+
+.columna-pie {
+    flex: 1 1 240px;
+}
+
+.logo-pie {
+    width: 170px;
+}
+
+.columna-pie > p {
+    max-width: 290px;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+h4 {
+    margin-top: 12px;
+    font-size: 22px;
+}
+
+.enlaces-pie,
+.lista-contacto-pie {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.enlaces-pie li,
+.lista-contacto-pie li {
+    margin-top: 10px;
+}
+
+.pie-derechos {
+    padding: 22px;
+    border-top: 1px solid var(--borde-claro);
+    font-family: var(--mono);
+    font-size: 10px;
+    text-align: center;
+}

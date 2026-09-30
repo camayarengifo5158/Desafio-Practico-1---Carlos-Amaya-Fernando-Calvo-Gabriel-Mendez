@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo · Fragola Postres</title>
+    <meta name="description" content="Catálogo de Fragola: cheesecakes artesanales, postres individuales, especialidades de la casa y cafetería.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=IBM+Plex+Mono:wght@400&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet">
+</head>
+
+<body class="pagina-catalogo">
+
+    <header class="cabecera">
+        <nav class="nav-container contenedor" aria-label="Navegación principal">
+            <a class="logo" href="index.html" aria-label="Fragola, inicio">
+                <img src="img/logo-fragola.png" alt="Fragola bakery">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a class="activo" href="catalogo.html" aria-current="page">Catálogo</a></li>
+                <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a class="cta-button boton-navegacion" href="contacto.html">Celebremos juntos <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main id="contenido" class="catalogo">
+
+        <!-- Encabezado del catálogo -->
+        <section class="catalogo__hero">
+            <div class="contenedor catalogo__hero-interior">
+                <p class="sobretitulo catalogo__sobretitulo">NUESTRO MENÚ</p>
+                <h1 class="catalogo__titulo">Catálogo de <span class="titulo-cursiva">postres.</span></h1>
+                <p class="catalogo__intro">Cheesecakes artesanales, postres fríos y pastelería fina, hechos con ingredientes de calidad y mucho cariño.</p>
+                <nav class="catalogo__indice" aria-label="Categorías del catálogo">
+                    <ul class="catalogo__indice-lista">
+                        <li class="catalogo__indice-item"><a class="catalogo__indice-enlace" href="#tartas-cheesecakes">Tartas y Cheesecakes</a></li>
+                        <li class="catalogo__indice-item"><a class="catalogo__indice-enlace" href="#individuales-shots">Individuales y Shots</a></li>
+                        <li class="catalogo__indice-item"><a class="catalogo__indice-enlace" href="#especialidades">Especialidades</a></li>
+                        <li class="catalogo__indice-item"><a class="catalogo__indice-enlace" href="#bebidas">Bebidas y Cafetería</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- INICIO CATEGORÍA: Tartas y Cheesecakes -->
+        <section class="catalogo__categoria catalogo__categoria--tartas" id="tartas-cheesecakes" aria-labelledby="titulo-tartas">
+            <div class="contenedor">
+                <header class="catalogo__categoria-encabezado">
+                    <p class="sobretitulo catalogo__categoria-etiqueta">CATEGORÍA 01</p>
+                    <h2 class="catalogo__categoria-titulo" id="titulo-tartas">Tartas y Cheesecakes</h2>
+                    <p class="catalogo__categoria-descripcion">Para compartir en casa, en la oficina o en cualquier celebración.</p>
+                </header>
+                <div class="catalogo__grid">
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Cheesecake+de+Fresa" alt="Cheesecake artesanal cubierto con salsa y fresas frescas" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Cheesecake de Fresa</h3>
+                            <p class="catalogo__producto-descripcion">Base de galleta, crema de queso suave y salsa de fresa natural.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$28.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Cheesecake+Lotus" alt="Cheesecake de galleta Lotus con crema y trozos de galleta" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Cheesecake Lotus</h3>
+                            <p class="catalogo__producto-descripcion">Crema de galleta caramelizada y topping crocante de Lotus.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$32.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Cheesecake+Pistacho" alt="Cheesecake de pistacho decorado con pistachos picados" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Cheesecake de Pistacho</h3>
+                            <p class="catalogo__producto-descripcion">Crema de pistacho, chocolate blanco y pistachos tostados.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$34.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Tarta+de+Limon" alt="Tarta de limón con merengue dorado" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Tarta de Limón</h3>
+                            <p class="catalogo__producto-descripcion">Masa sablée, crema cítrica y merengue flameado.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$24.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Tarta+de+Chocolate" alt="Tarta de chocolate oscuro con cobertura brillante" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Tarta de Chocolate</h3>
+                            <p class="catalogo__producto-descripcion">Ganache de chocolate semiamargo sobre base crocante de cacao.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$26.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- FIN CATEGORÍA: Tartas y Cheesecakes -->
+
+        <!-- INICIO CATEGORÍA: Postres Individuales y Shots -->
+        <section class="catalogo__categoria catalogo__categoria--individuales" id="individuales-shots" aria-labelledby="titulo-individuales">
+            <div class="contenedor">
+                <header class="catalogo__categoria-encabezado">
+                    <p class="sobretitulo catalogo__categoria-etiqueta">CATEGORÍA 02</p>
+                    <h2 class="catalogo__categoria-titulo" id="titulo-individuales">Postres Individuales y Shots</h2>
+                    <p class="catalogo__categoria-descripcion">Porciones perfectas para antojos y mesas dulces.</p>
+                </header>
+                <div class="catalogo__grid">
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Shot+Tres+Leches" alt="Vaso individual de postre tres leches con crema y canela" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Shot Tres Leches</h3>
+                            <p class="catalogo__producto-descripcion">Bizcocho empapado en tres leches con crema batida y canela.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$3.50</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Shot+Oreo" alt="Vaso de postre con galleta Oreo triturada y crema" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Shot de Oreo</h3>
+                            <p class="catalogo__producto-descripcion">Capas de crema de queso y galleta Oreo triturada.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$3.75</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Mini+Cheesecake" alt="Mini cheesecake individual con frutos rojos" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Mini Cheesecake</h3>
+                            <p class="catalogo__producto-descripcion">Porción individual con frutos rojos o salsa de caramelo.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$4.50</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Brownie" alt="Brownie de chocolate con centro cremoso" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Brownie Fudgy</h3>
+                            <p class="catalogo__producto-descripcion">Chocolate intenso, centro húmedo y nueces tostadas.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$3.25</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Macarons" alt="Caja de macarons franceses de distintos sabores" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Macarons (x6)</h3>
+                            <p class="catalogo__producto-descripcion">Seis macarons franceses con rellenos florales y frutales.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$10.40</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- FIN CATEGORÍA: Postres Individuales y Shots -->
+
+        <!-- INICIO CATEGORÍA: Especialidades de la Casa -->
+        <section class="catalogo__categoria catalogo__categoria--especialidades" id="especialidades" aria-labelledby="titulo-especialidades">
+            <div class="contenedor">
+                <header class="catalogo__categoria-encabezado">
+                    <p class="sobretitulo catalogo__categoria-etiqueta">CATEGORÍA 03</p>
+                    <h2 class="catalogo__categoria-titulo" id="titulo-especialidades">Especialidades de la Casa</h2>
+                    <p class="catalogo__categoria-descripcion">Los favoritos de nuestros clientes y piezas para celebrar.</p>
+                </header>
+                <div class="catalogo__grid">
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Donas+Decoradas" alt="Caja de donas con glaseado pastel y chispas de colores" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Donas Decoradas</h3>
+                            <p class="catalogo__producto-descripcion">Caja de donas esponjosas con glaseado artesanal y chispas.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$22.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Pastel+Vintage" alt="Pastel estilo vintage decorado con betún y detalles clásicos" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Pastel Vintage</h3>
+                            <p class="catalogo__producto-descripcion">Bizcocho suave relleno de crema pastelera con decoración clásica.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$18.50</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Pastel+Red+Velvet" alt="Rebanada de pastel red velvet con crema de queso" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Red Velvet</h3>
+                            <p class="catalogo__producto-descripcion">Bizcocho aterciopelado con frosting de queso crema.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$30.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Cupcakes" alt="Caja de cupcakes decorados con crema de colores" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Cupcakes (x6)</h3>
+                            <p class="catalogo__producto-descripcion">Vainilla o chocolate con frosting de crema de mantequilla.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$15.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Mesa+Dulce" alt="Mesa de postres surtidos para eventos" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Caja Dulce Surtida</h3>
+                            <p class="catalogo__producto-descripcion">Selección de 12 mini postres, ideal para regalar o compartir.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$35.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- FIN CATEGORÍA: Especialidades de la Casa -->
+
+        <!-- INICIO CATEGORÍA: Bebidas y Cafetería -->
+        <section class="catalogo__categoria catalogo__categoria--bebidas" id="bebidas" aria-labelledby="titulo-bebidas">
+            <div class="contenedor">
+                <header class="catalogo__categoria-encabezado">
+                    <p class="sobretitulo catalogo__categoria-etiqueta">CATEGORÍA 04</p>
+                    <h2 class="catalogo__categoria-titulo" id="titulo-bebidas">Bebidas y Cafetería</h2>
+                    <p class="catalogo__categoria-descripcion">El acompañante ideal para tu postre.</p>
+                </header>
+                <div class="catalogo__grid">
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Cafe+Americano" alt="Taza de café americano recién preparado" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Café Americano</h3>
+                            <p class="catalogo__producto-descripcion">Café de altura, servido caliente o frío.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$2.25</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Latte" alt="Latte con arte en la espuma de leche" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Latte</h3>
+                            <p class="catalogo__producto-descripcion">Espresso con leche vaporizada y espuma cremosa.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$3.50</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Frappe" alt="Frappé de café con crema batida y caramelo" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Frappé de Caramelo</h3>
+                            <p class="catalogo__producto-descripcion">Café frappé con salsa de caramelo y crema batida.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$4.50</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="https://placehold.co/600x600/fff1f5/d91661?text=Limonada+de+Fresa" alt="Vaso de limonada de fresa con hielo y hojas de menta" width="600" height="600" loading="lazy">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Limonada de Fresa</h3>
+                            <p class="catalogo__producto-descripcion">Limón natural y fresa fresca con hielo y menta.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$3.25</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- FIN CATEGORÍA: Bebidas y Cafetería -->
+
+        <!-- Llamado a pedidos por encargo -->
+        <section class="catalogo__cta" aria-labelledby="titulo-cta">
+            <div class="contenedor catalogo__cta-interior">
+                <h2 class="catalogo__cta-titulo" id="titulo-cta">¿Buscas algo personalizado?</h2>
+                <p class="catalogo__cta-texto">Encargos con 48 horas de anticipación. Escríbenos y diseñamos tu pedido.</p>
+                <a class="cta-button catalogo__cta-enlace" href="contacto.html">Cotizar pedido</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor fila-pie">
+            <div class="columna-pie">
+                <a class="logo logo-pie" href="index.html">
+                    <img alt="Fragola bakery" src="img/logo-fragola.png" />
+                </a>
+                <p>
+                    Repostería artesanal creada con pasión para llenar de dulzura tus momentos más especiales
+                </p>
+            </div>
+            <div class="columna-pie">
+                <h4>
+                    Navegación
+                </h4>
+                <ul class="enlaces-pie">
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">
+                            Catálogo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sobreNosotros.html">
+                            Sobre Nosotros
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="columna-pie contacto-pie">
+                <h4>
+                    Atención y Pedidos
+                </h4>
+                <ul class="lista-contacto-pie">
+                    <li>
+                        <a href="contacto.html">
+                            Consulta por tu pedido
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/fragola.postres" rel="noopener noreferrer" target="_blank">
+                            @fragola.postres
+                        </a>
+                    </li>
+                    <li>
+                        <span>
+                            La Mascota &amp; Epic Plaza
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            Encargos con 48h de anticipación
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pie-derechos">
+            <p>
+                2026 Fragola Postres - Proyecto de Desarrollo Web
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
