@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo · Fragola Postres</title>
+    <meta name="description" content="Catálogo de Fragola: cheesecakes artesanales, postres individuales, especialidades de la casa y cafetería.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=IBM+Plex+Mono:wght@400&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet">
+</head>
+
+<body class="pagina-catalogo">
+
+    <header class="cabecera">
+        <nav class="nav-container contenedor" aria-label="Navegación principal">
+            <a class="logo" href="index.html" aria-label="Fragola, inicio">
+                <img src="img/logo-fragola.png" alt="Fragola bakery">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a class="activo" href="catalogo.html" aria-current="page">Catálogo</a></li>
+                <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a class="cta-button boton-navegacion" href="contacto.html">Celebremos juntos <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main id="contenido" class="catalogo">
+
+        <!-- Encabezado del catálogo -->
+        <section class="catalogo__hero">
+            <div class="contenedor catalogo__hero-interior">
+                <p class="sobretitulo catalogo__sobretitulo">NUESTRO MENÚ</p>
+                <h1 class="catalogo__titulo">Catálogo de <span class="titulo-cursiva">postres.</span></h1>
+                <p class="catalogo__intro">Cheesecakes artesanales, postres fríos y pastelería fina, hechos con ingredientes de calidad y mucho cariño.</p>
+                <nav class="catalogo__indice" aria-label="Categorías del catálogo">
+                    <ul class="catalogo__indice-lista">
+                        <li class="catalogo__indice-item"><a class="catalogo__indice-enlace" href="#tartas-cheesecakes">Tartas y Cheesecakes</a></li>
+                        <li class="catalogo__indice-item"><a class="catalogo__indice-enlace" href="#individuales-shots">Individuales y Shots</a></li>
+                        <li class="catalogo__indice-item"><a class="catalogo__indice-enlace" href="#especialidades">Especialidades</a></li>
+                        <li class="catalogo__indice-item"><a class="catalogo__indice-enlace" href="#bebidas">Galletas y Pasteles Listos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- INICIO CATEGORÍA: Tartas y Cheesecakes -->
+        <section class="catalogo__categoria catalogo__categoria--tartas" id="tartas-cheesecakes" aria-labelledby="titulo-tartas">
+            <div class="contenedor">
+                <header class="catalogo__categoria-encabezado">
+                    <p class="sobretitulo catalogo__categoria-etiqueta">CATEGORÍA 01</p>
+                    <h2 class="catalogo__categoria-titulo" id="titulo-tartas">Tartas y Cheesecakes</h2>
+                    <p class="catalogo__categoria-descripcion">Para compartir en casa, en la oficina o en cualquier celebración.</p>
+                </header>
+                <div class="catalogo__grid">
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_paleo_chocolate-cake.png" alt="Paleo Chocolate Cheesecake">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Paleo Chocolate Cheesecake</h3>
+                            <p class="catalogo__producto-descripcion">El mismo paleo chocolate cake, pero agregamos una suave capa de cheesecake endulzado con monkfruit y sin gluten. ¡Una increíble combinación y contraste de sabor!</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Porción: $4.75 | Entero: $38.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_paleo_carrot_cheesecake.png" alt="Paleo Carrot Cheesecake">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Paleo Carrot Cheesecake</h3>
+                            <p class="catalogo__producto-descripcion">Deliciosa torta de zanahoria sin gluten y sin azúcar, con una capa de cheesecake encima y terminado con turrón flameado sin azúcar.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Porción: $5.25 | Entero: $42.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_keto_lemon_blueBerry_Cheesecake.png" alt="Keto Lemon Blueberry Cheesecake">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Keto Lemon Blueberry Cheesecake</h3>
+                            <p class="catalogo__producto-descripcion">Cremoso cheesecake sugar free con blueberries sobre una base gluten free de almendra, decorado con lemon curd y fresas.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Porción: $5.50 | Entero: $42.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_keto_cheesecake.png" alt="Keto Cheesecake">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Keto Cheesecake</h3>
+                            <p class="catalogo__producto-descripcion">Base gluten free de almendra con un cremoso relleno de queso, endulzado con monkfruit (acompañado de Lemon Curd o Jalea de Fresa; opción blueberries + $2.00).</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Porción: $5.50 | Entero: $42.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_key_lime_pie.png" alt="Key Lime Pie">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Key Lime Pie</h3>
+                            <p class="catalogo__producto-descripcion">Tarta cremosa tradicional con base crocante y toque cítrico de limón.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Unidad: $1.50 (Mínimo: 12 unidades)</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- FIN CATEGORÍA: Tartas y Cheesecakes -->
+
+        <!-- INICIO CATEGORÍA: Postres Individuales y Shots -->
+        <section class="catalogo__categoria catalogo__categoria--individuales" id="individuales-shots" aria-labelledby="titulo-individuales">
+            <div class="contenedor">
+                <header class="catalogo__categoria-encabezado">
+                    <p class="sobretitulo catalogo__categoria-etiqueta">CATEGORÍA 02</p>
+                    <h2 class="catalogo__categoria-titulo" id="titulo-individuales">Postres Individuales y Shots</h2>
+                    <p class="catalogo__categoria-descripcion">Porciones perfectas para antojos y mesas dulces.</p>
+                </header>
+                <div class="catalogo__grid">
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat__healthy_tiramisu.png" alt="Healthy Tiramisú">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Healthy Tiramisú</h3>
+                            <p class="catalogo__producto-descripcion">Capas de suspiro libre de gluten y de azúcar remojado en café, alternado con capas cremosas y topping de pistacho o cocoa.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Individual: $8.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_paleo_brownies.png" alt="Paleo Brownies">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Paleo Brownies</h3>
+                            <p class="catalogo__producto-descripcion">Chewy brownies sin gluten, endulzados con monkfruit, ideales para satisfacer cualquier antojo.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Unidad: $3.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_lemon_bars.png" alt="Lemon Bars">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Lemon Bars</h3>
+                            <p class="catalogo__producto-descripcion">Deliciosas barras de limón endulzadas con monkfruit, sobre una base de avena.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Unidad: $3.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_manjar_de_datil.png" alt="Alfajor con Manjar de Dátil">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Alfajor con Manjar de Dátil</h3>
+                            <p class="catalogo__producto-descripcion">Alfajor hecho a base de harina de almendras, endulzado con monkfruit y con relleno de caramelo de dátiles.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Unidad: $1.95</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_cake_shooters.png" alt="Cake Shooters">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Cake Shooters</h3>
+                            <p class="catalogo__producto-descripcion">Postres servidos en vaso en combinaciones como Chocolate-Maracuyá, Blueberry-Limón, Chocolate Blanco-Fresas, Birthday Cake o Red Velvet.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Unidad: $1.95 (Mínimo: 12 unidades por sabor)</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_shoots_tres_leches.png" alt="Shots de Tres Leches">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Shots de Tres Leches</h3>
+                            <p class="catalogo__producto-descripcion">Porción individual en shot de pastel empapado en mezcla de tres leches y decorado con merengue.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Unidad: $1.75 (Mínimo: 20 unidades)</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_mini_donas.png" alt="Mini Donas">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Mini Donas</h3>
+                            <p class="catalogo__producto-descripcion">Mini donas horneadas con coberturas glaseadas de colores personalizadas.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Unidad: $1.50</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- FIN CATEGORÍA: Postres Individuales y Shots -->
+
+        <!-- INICIO CATEGORÍA: Especialidades de la Casa -->
+        <section class="catalogo__categoria catalogo__categoria--especialidades" id="especialidades" aria-labelledby="titulo-especialidades">
+            <div class="contenedor">
+                <header class="catalogo__categoria-encabezado">
+                    <p class="sobretitulo catalogo__categoria-etiqueta">CATEGORÍA 03</p>
+                    <h2 class="catalogo__categoria-titulo" id="titulo-especialidades">Especialidades de la Casa</h2>
+                    <p class="catalogo__categoria-descripcion">Los favoritos de nuestros clientes y piezas para celebrar.</p>
+                </header>
+                <div class="catalogo__grid">
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_pavlova_lemon_curd.png" alt="Pavlova de Lemon Curd, Fresas y Blueberries">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Pavlova de Lemon Curd, Fresas y Blueberries</h3>
+                            <p class="catalogo__producto-descripcion">Espumilla crujiente por fuera y chewy por dentro, elaborada sin azúcar, con relleno de lemon curd y una suave crema, decorada con fresas frescas y blueberries (10-12 personas).</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$30.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_pavlova_chocolate_crema_cafe_fresas.png" alt="Pavlova de Chocolate con Crema de Café y Fresas">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Pavlova de Chocolate con Crema de Café y Fresas</h3>
+                            <p class="catalogo__producto-descripcion">Espumilla de chocolate sin azúcar con relleno de crema de café sin lácteos, decorada con fresas frescas (10-12 personas).</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$30.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_mini_pavlovas.png" alt="Mini Pavlovas">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Mini Pavlovas</h3>
+                            <p class="catalogo__producto-descripcion">Espumillas individuales sugar free crujientes con rellenos de fruta o cremas (fresa, caramelo, blueberry o limón).</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$2.50 (o $1.50 en formato evento)</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_apple_datil_nuez_loaf.png" alt="Apple Dátil y Nuez Loaf (Guilt Free Loaf)">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Apple Dátil y Nuez Loaf (Guilt Free Loaf)</h3>
+                            <p class="catalogo__producto-descripcion">Torta elaborada con fruta natural, endulzada con monkfruit y sin gluten, decorada con nueces y rodajas cítricas.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$30.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_healthy_cupcakes.png" alt="Healthy Cupcakes">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Healthy Cupcakes</h3>
+                            <p class="catalogo__producto-descripcion">Cupcakes saludables decorados con flores artesanales y betún ligero.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Caja de 12 unidades: $30.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_espumillas_sugar_free.png" alt="Espumillas Sugar Free">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Espumillas Sugar Free</h3>
+                            <p class="catalogo__producto-descripcion">Espumillas sin azúcar disponibles en sabores como Original, fresa, chocolate, matcha, fresa chocolate, especias, café o temporada.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Bolsita de 40g: $3.75</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- FIN CATEGORÍA: Especialidades de la Casa -->
+
+        <!-- INICIO CATEGORÍA: Galletas y Pasteles Listos -->
+        <section class="catalogo__categoria catalogo__categoria--bebidas" id="bebidas" aria-labelledby="titulo-bebidas">
+            <div class="contenedor">
+                <header class="catalogo__categoria-encabezado">
+                    <p class="sobretitulo catalogo__categoria-etiqueta">CATEGORÍA 04</p>
+                    <h2 class="catalogo__categoria-titulo" id="titulo-bebidas">Galletas y Pasteles Listos</h2>
+                    <p class="catalogo__categoria-descripcion">Galletas horneadas a diario y pasteles listos para llevar.</p>
+                </header>
+                <div class="catalogo__grid">
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_choco_chips_lotus.png" alt="Choco Chip Lotus Cookie">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Choco Chip Lotus Cookie</h3>
+                            <p class="catalogo__producto-descripcion">Galleta chunky crujiente por fuera y suave por dentro con chispas y galleta Lotus Biscoff incrustada.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Individual: $3.50 | Caja de 6 unidades: $18.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_oreo.png" alt="Choco Chip Oreo Cookie">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Choco Chip Oreo Cookie</h3>
+                            <p class="catalogo__producto-descripcion">Galleta chunky artesanal horneada a diario rellena/cubierta con galleta Oreo y chispas de chocolate.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">Individual: $3.50 | Caja de 6 unidades: $18.00</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_healthy_chocolate_dubay.png" alt="Healthy Dubai Chocolate Chip">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Healthy Dubai Chocolate Chip</h3>
+                            <p class="catalogo__producto-descripcion">Galleta de chocolate con chispas de chocolate con topping de pistacho, elaborada con harina de almendras, aceite de coco y monkfruit.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$3.75</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="catalogo__producto-card">
+                        <figure class="catalogo__producto-figura">
+                            <img class="catalogo__producto-img" src="img/cat_healthy_nutella_choco_chip.png" alt="Healthy Nutella Choco Chip">
+                        </figure>
+                        <div class="catalogo__producto-cuerpo">
+                            <h3 class="catalogo__producto-titulo">Healthy Nutella Choco Chip</h3>
+                            <p class="catalogo__producto-descripcion">Rellena de nutella saludable, elaborada con harina de almendra, aceite de coco y endulzada con monkfruit.</p>
+                            <div class="catalogo__producto-pie">
+                                <span class="catalogo__producto-precio">$4.25</span>
+                                <button type="button" class="catalogo__btn-accion btn-ordenar">Ordenar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- FIN CATEGORÍA: Galletas y Pasteles Listos -->
+
+        <!-- Llamado a pedidos por encargo -->
+        <section class="catalogo__cta" aria-labelledby="titulo-cta">
+            <div class="contenedor catalogo__cta-interior">
+                <h2 class="catalogo__cta-titulo" id="titulo-cta">¿Buscas algo personalizado?</h2>
+                <p class="catalogo__cta-texto">Encargos con 48 horas de anticipación. Escríbenos y diseñamos tu pedido.</p>
+                <a class="cta-button catalogo__cta-enlace" href="contacto.html">Cotizar pedido</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor fila-pie">
+            <div class="columna-pie">
+                <a class="logo logo-pie" href="index.html">
+                    <img alt="Fragola bakery" src="img/logo-fragola.png" />
+                </a>
+                <p>
+                    Repostería artesanal creada con pasión para llenar de dulzura tus momentos más especiales
+                </p>
+            </div>
+            <div class="columna-pie">
+                <h4>
+                    Navegación
+                </h4>
+                <ul class="enlaces-pie">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="columna-pie contacto-pie">
+                <h4>
+                    Atención y Pedidos
+                </h4>
+                <ul class="lista-contacto-pie">
+                    <li><a href="contacto.html">Consulta por tu pedido</a></li>
+                    <li><a href="https://www.instagram.com/fragola.postres" rel="noopener noreferrer" target="_blank">@fragola.postres</a></li>
+                    <li><span>La Mascota &amp; Epic Plaza</span></li>
+                    <li><span>Encargos con 48h de anticipación</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pie-derechos">
+            <p>
+                2026 Fragola Postres - Proyecto de Desarrollo Web
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
