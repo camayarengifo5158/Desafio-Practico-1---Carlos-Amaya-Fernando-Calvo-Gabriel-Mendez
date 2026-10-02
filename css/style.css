@@ -1003,3 +1003,245 @@ h1 {
 .cierre-nosotros .boton-whatsapp {
     margin-top: 28px;
 }
+
+
+ 
+/* ==========================================================
+   9. BREAKPOINTS (diseno responsive)
+   ----------------------------------------------------------
+   @media (max-width: X) = las reglas de adentro solo se aplican cuando
+   el ancho de la pantalla es X o MENOR. Van al final del archivo para
+   que sobrescriban las reglas anteriores (misma especificidad = gana
+   la que esta mas abajo).
+ 
+   Flexbox con flex-wrap ya acomoda columnas por si solo, por eso
+   aqui solo se ajustan tamanos de letra, espacios y alturas.
+ 
+   Puntos de quiebre:
+   - 992px: tablet horizontal / laptop pequena
+   - 768px: tablet vertical
+   - 480px: celular
+   ========================================================== */
+ 
+/* ---------- Tablet horizontal (hasta 992px) ---------- */
+@media (max-width: 992px) {
+ 
+    h1 {
+        font-size: 3.2rem;                  /* 64px -> ~51px */
+    }
+ 
+    h2 {
+        font-size: 2.2rem;
+    }
+ 
+    .destacados,
+    .sucursales {
+        padding: 64px 0;                    /* menos espacio vertical entre secciones */
+    }
+ 
+    .eventos .columna-imagen img {
+        height: 420px;                      /* imagen menos alta (antes 520px) */
+    }
+ 
+    .fila-pie {
+        gap: 32px;
+    }
+}
+ 
+/* ---------- Tablet vertical (hasta 768px) ---------- */
+@media (max-width: 768px) {
+ 
+    h1 {
+        font-size: 2.6rem;
+        letter-spacing: -1px;
+    }
+ 
+    h2 {
+        font-size: 2rem;
+    }
+ 
+    /* Navegacion: logo arriba, menu y boton debajo, todo centrado. */
+    .nav-container {
+        justify-content: center;            /* centra los elementos de la barra */
+        gap: 12px;
+    }
+ 
+    .nav-menu {
+        flex: 1 1 100%;                     /* el menu ocupa toda la fila */
+        order: 3;                           /* "order" cambia la posicion visual: pasa al final */
+    }
+ 
+    /* Portada */
+    .portada-interior {
+        padding-top: 32px;
+    }
+ 
+    .portada-centro {
+        text-align: center;                 /* titulo centrado cuando la ilustracion baja */
+        gap: 24px;
+    }
+ 
+    .portada-inferior {
+        justify-content: center;
+        text-align: center;
+    }
+ 
+    /* Secciones */
+    .destacados,
+    .sucursales,
+    .seccion-contacto,
+    .catalogo__categoria,
+    .catalogo__cta {
+        padding: 48px 0;
+    }
+ 
+    .eventos {
+        padding-bottom: 48px;
+    }
+ 
+    .dos-columnas {
+        gap: 28px;
+    }
+ 
+    .eventos .columna-imagen img {
+        height: 340px;
+    }
+ 
+    .tarjeta-imagen img {
+        height: 300px;
+    }
+ 
+    /* Catalogo y contacto: titulos de hero mas pequenos */
+    .catalogo__hero,
+    .portada-contacto {
+        padding: 48px 0;
+    }
+ 
+    .catalogo__titulo,
+    .portada-contacto h1 {
+        font-size: 2.2rem;
+    }
+ 
+    .catalogo__categoria-titulo,
+    .catalogo__cta-titulo,
+    .seccion-contacto h2 {
+        font-size: 1.7rem;
+    }
+ 
+    /* Sobre nosotros */
+    .pagina-nosotros .portada-centro h1 {
+        font-size: 2.4rem;
+    }
+ 
+    .pagina-nosotros .destacados,
+    .historia-nosotros,
+    .cierre-nosotros {
+        padding: 48px 0;
+    }
+ 
+    /* Pie de pagina centrado */
+    .fila-pie {
+        text-align: center;
+        justify-content: center;
+    }
+ 
+    .columna-pie > p {
+        margin-left: auto;                  /* centra el parrafo (tiene max-width) */
+        margin-right: auto;
+    }
+}
+ 
+/* ---------- Celular (hasta 480px) ---------- */
+@media (max-width: 480px) {
+ 
+    body {
+        font-size: 16px;                    /* letra base un poco mas pequena */
+    }
+ 
+    .contenedor {
+        width: 92%;                         /* menos margen lateral para aprovechar el ancho */
+    }
+ 
+    h1 {
+        font-size: 2.1rem;
+    }
+ 
+    h2 {
+        font-size: 1.7rem;
+    }
+ 
+    h3 {
+        font-size: 24px;
+    }
+ 
+    .logo {
+        width: 120px;
+    }
+ 
+    .nav-menu {
+        gap: 8px 16px;
+    }
+ 
+    .nav-menu a {
+        font-size: 15px;
+    }
+ 
+    /* Botones mas compactos y faciles de tocar */
+    .cta-button,
+    .boton-primario,
+    .boton-whatsapp,
+    .boton-mapa,
+    .boton-enviar {
+        padding: 12px 22px;
+    }
+ 
+    .portada-botones {
+        width: 100%;
+    }
+ 
+    .portada-inferior > p {
+        font-size: 16px;
+    }
+ 
+    .tarjeta-imagen img {
+        height: 240px;
+    }
+ 
+    .eventos .columna-imagen img {
+        height: 260px;
+    }
+ 
+    /* Tarjetas del catalogo con menos relleno */
+    .catalogo__producto-card,
+    .pagina-nosotros .tarjeta {
+        padding: 20px;
+    }
+ 
+    .catalogo__producto-img {
+        height: 200px;
+    }
+ 
+    .catalogo__titulo,
+    .portada-contacto h1 {
+        font-size: 1.9rem;
+    }
+ 
+    .catalogo__intro,
+    .descripcion-contacto {
+        font-size: 16px;
+    }
+ 
+    /* Formulario */
+    .contenedor-formulario {
+        padding: 18px;
+    }
+ 
+    .pagina-nosotros .portada-centro h1 {
+        font-size: 2rem;
+    }
+ 
+    .pie-derechos {
+        padding: 16px;
+    }
+}
+ 
