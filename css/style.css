@@ -1,20 +1,18 @@
 /* ==========================================================
-   FRAGOLA - style.css
-   ----------------------------------------------------------
+   
    INDICE
-   0. Base: variables, reset y etiquetas generales
-   1. Utilidades de layout (contenedor, sobretitulo)
-   2. Cabecera y navegacion      (compartido: las 4 paginas)
-   3. Botones                    (compartido: las 4 paginas)
-   4. Pie de pagina              (compartido: las 4 paginas)
-   5. index.html                 (portada, favoritos, eventos, sucursales)
-   6. catalogo.html
-   7. contacto.html
-   8. sobreNosotros.html
 
-   Nota: sobreNosotros.html reutiliza clases de index (.portada,
-   .eventos, .destacados, .tarjeta) y contacto.html reutiliza
-   .sucursales y .tarjeta-sucursal. Por eso viven en la seccion 5.
+   0. Base: variables, reset y etiquetas generales      - 19
+   1. Utilidades de layout (contenedor, sobretitulo)    - 98
+   2. Cabecera y navegacion                             - 116
+   3. Botones                                           - 183
+   4. Pie de pagina                                     - 233
+   5. index.html                                        - 287
+   6. catalogo.html                                     - 570
+   7. contacto.html                                     - 739
+   8. sobreNosotros.html                                - 879
+   9. breakpoints                                       - 958
+
    ========================================================== */
 
 
@@ -22,70 +20,63 @@
    0. BASE
    ========================================================== */
 
-/* :root = el elemento <html>. Aqui se guardan las variables (colores y
-   fuentes) que se usan en todo el archivo con var(--nombre).
-   Si quieres cambiar un color de toda la web, lo cambias solo aqui. */
 :root {
-    --fucsia: #d91661;                          /* color principal: textos, bordes y botones */
-    --rosa: #e99aaf;                            /* rosa medio: bordes de campos de formulario */
-    --rosa-claro: #fff1f5;                      /* fondo de portadas y secciones destacadas */
-    --dorado: #bf9b38;                          /* solo para lineas decorativas */
+    --fucsia: #d91661;
+    --rosa: #e99aaf;
+    --rosa-claro: #fff1f5;
+    --dorado: #bf9b38;
     --blanco: #ffffff;
-    --texto: #503d43;                           /* gris rosado para parrafos (mas legible que el fucsia) */
-    --borde-claro: rgba(191, 155, 56, 0.45);    /* dorado semitransparente (0.45 = 45% de opacidad) */
-    --borde-suave: rgba(233, 154, 175, 0.5);    /* rosa semitransparente */
-    --serif: 'DM Serif Display', Georgia, serif;   /* titulos; si no carga, usa Georgia */
-    --mono: 'IBM Plex Mono', monospace;            /* precios, horarios y detalles pequenos */
-    --fuente-menu: 'Raleway', Arial, sans-serif;   /* menu, enlaces y botones secundarios */
+    --texto: #503d43;
+    --borde-claro: rgba(191, 155, 56, 0.45);
+    --borde-suave: rgba(233, 154, 175, 0.5);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --mono: 'IBM Plex Mono', monospace;
+    --fuente-menu: 'Raleway', Arial, sans-serif;
 }
 
-/* Selector universal: afecta a todos los elementos. */
 * {
-    box-sizing: border-box;     /* el padding y el borde se cuentan DENTRO del ancho declarado,
-                                   asi un elemento de width 100% no se desborda */
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;                          /* quita el margen que el navegador pone por defecto */
+    margin: 0;
     background-color: var(--blanco);
-    color: var(--fucsia);               /* color de texto por defecto de toda la pagina */
-    font-family: Georgia, serif;        /* fuente base de los parrafos */
+    color: var(--fucsia);
+    font-family: Georgia, serif;
     font-size: 17px;
-    line-height: 1.6;                   /* altura de linea: 1.6 veces el tamano de letra, mejora lectura */
+    line-height: 1.6;
 }
 
 a {
     color: var(--fucsia);
-    text-decoration: none;              /* quita el subrayado de los enlaces */
+    text-decoration: none;
 }
 
-/* :hover = al pasar el mouse. :focus-visible = al navegar con teclado (Tab). */
 a:hover,
 a:focus-visible {
     text-decoration: underline;
 }
 
 img {
-    display: block;         /* evita el hueco blanco que deja una imagen "en linea" */
-    width: 100%;            /* la imagen se ajusta al ancho de su contenedor */
+    display: block;
+    width: 100%;
     max-width: 100%;
-    height: auto;           /* mantiene la proporcion original */
+    height: auto;
 }
 
-/* Quita los margenes por defecto; el espaciado se controla manualmente. */
 h1, h2, h3, h4, p {
     margin: 0;
 }
 
 h1, h2, h3, h4 {
     font-family: var(--serif);
-    font-weight: 400;       /* DM Serif Display ya es gruesa; 400 evita negrita falsa */
-    line-height: 1.1;       /* titulos con lineas muy juntas */
+    font-weight: 400;
+    line-height: 1.1;
 }
 
 h1 {
-    font-size: 4rem;        /* rem = multiplo del tamano base (16px): 4rem = 64px */
-    letter-spacing: -2px;   /* valor negativo acerca las letras entre si */
+    font-size: 4rem;
+    letter-spacing: -2px;
 }
 
 h2 {
@@ -108,18 +99,16 @@ h4 {
    1. UTILIDADES DE LAYOUT
    ========================================================== */
 
-/* Caja que centra y limita el contenido de cada seccion. */
 .contenedor {
-    width: 90%;             /* en pantallas pequenas ocupa el 90% */
-    max-width: 1200px;      /* en pantallas grandes nunca pasa de 1200px */
-    margin: 0 auto;         /* "auto" a los lados = centrado horizontal */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Texto pequeno en mayusculas sobre los titulos. */
 .sobretitulo {
     font-size: 12px;
-    letter-spacing: 2px;            /* separa las letras */
-    text-transform: uppercase;      /* convierte a MAYUSCULAS sin cambiar el HTML */
+    letter-spacing: 2px;
+    text-transform: uppercase;
     line-height: 1.6;
 }
 
@@ -132,14 +121,13 @@ h4 {
     background-color: var(--blanco);
 }
 
-/* Barra de navegacion: logo + menu + boton en una fila. */
 .nav-container {
-    display: flex;                      /* activa Flexbox: hijos en fila */
-    flex-wrap: wrap;                    /* si no caben, pasan a la siguiente fila (responsive) */
-    justify-content: space-between;     /* reparte los hijos: uno en cada extremo y el resto en medio */
-    align-items: center;                /* los centra verticalmente */
-    gap: 24px;                          /* espacio entre hijos */
-    padding: 12px 0;                    /* 12px arriba/abajo, 0 a los lados */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 0;
     border-bottom: 1px solid var(--borde-claro);
 }
 
@@ -155,18 +143,16 @@ h4 {
 
 .nav-menu {
     display: flex;
-    flex: 1 1 300px;            /* atajo de flex-grow, flex-shrink y flex-basis:
-                                   puede crecer, puede encogerse, ancho ideal 300px */
+    flex: 1 1 300px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 23px;             /* 12px entre filas, 23px entre columnas */
+    gap: 12px 23px;
     padding: 0;
     margin: 0;
-    list-style: none;           /* quita las vinetas de la lista */
+    list-style: none;
     font-size: 14px;
 }
 
-/* Fuente Raleway para el menu y los enlaces del pie. */
 .nav-menu a,
 .enlaces-pie a {
     font-family: var(--fuente-menu);
@@ -175,11 +161,10 @@ h4 {
 }
 
 .nav-menu a {
-    display: inline-block;      /* permite aplicar padding vertical al enlace */
+    display: inline-block;
     padding: 8px 0;
 }
 
-/* Enlace de la pagina actual (clase "activo" en el HTML). */
 .nav-menu .activo {
     text-decoration: underline;
 }
@@ -188,7 +173,6 @@ h4 {
     font-size: 14px;
 }
 
-/* Fuerza el color fucsia en enlaces de cabecera, portada y pie. */
 .cabecera a,
 .portada a,
 .pie a {
@@ -200,25 +184,23 @@ h4 {
    3. BOTONES (compartido)
    ========================================================== */
 
-/* Todos los botones redondeados comparten la misma base. */
 .cta-button,
 .boton-primario,
 .boton-whatsapp,
 .boton-mapa,
 .boton-tarjeta {
     display: inline-block;
-    position: relative;                 /* necesario para poder mover el boton con "top" */
-    top: 0;                             /* posicion inicial; el hover la cambia */
-    padding: 14px 26px;                 /* 14px arriba/abajo, 26px a los lados */
+    position: relative;
+    top: 0;
+    padding: 14px 26px;
     border: 1px solid var(--fucsia);
-    border-radius: 999px;               /* valor enorme = bordes totalmente redondos (forma de pildora) */
+    border-radius: 999px;
     font-family: var(--serif);
     line-height: 1.3;
     text-align: center;
-    transition: top 0.3s;               /* anima el cambio de "top" durante 0.3 segundos */
+    transition: top 0.3s;
 }
 
-/* Al pasar el mouse o enfocar con teclado, el boton "sube" 3px. */
 .cta-button:hover,
 .cta-button:focus-visible,
 .boton-primario:hover,
@@ -229,7 +211,7 @@ h4 {
 .boton-mapa:focus-visible,
 .boton-tarjeta:hover,
 .boton-tarjeta:focus-visible {
-    top: -3px;                          /* valor negativo = se mueve hacia arriba */
+    top: -3px;
 }
 
 .cabecera .cta-button,
@@ -237,14 +219,13 @@ h4 {
     border-color: var(--fucsia);
 }
 
-/* Version mas pequena del boton, usada dentro de tarjetas. */
 .boton-tarjeta {
     padding: 9px 20px;
     font-size: 14px;
 }
 
 .boton-mapa {
-    margin-top: auto;           /* en una columna flex, "auto" empuja el boton hacia abajo */
+    margin-top: auto;
     font-size: 14px;
 }
 
@@ -267,7 +248,6 @@ h4 {
     padding-bottom: 56px;
 }
 
-/* Cada columna ocupa al menos 240px; si no caben, bajan de fila. */
 .columna-pie {
     flex: 1 1 240px;
 }
@@ -276,16 +256,15 @@ h4 {
     width: 170px;
 }
 
-/* ">" = solo los <p> hijos directos de .columna-pie. */
 .columna-pie > p {
-    max-width: 290px;           /* limita el ancho para que el texto no se estire */
+    max-width: 290px;
     margin-top: 25px;
     font-size: 15px;
 }
 
 .enlaces-pie,
 .lista-contacto-pie {
-    margin: 24px 0 0;           /* 24px arriba, 0 a los demas lados */
+    margin: 24px 0 0;
     padding: 0;
     list-style: none;
     font-size: 14px;
@@ -301,7 +280,7 @@ h4 {
     border-top: 1px solid var(--borde-claro);
     font-family: var(--mono);
     font-size: 10px;
-    text-align: center;         /* centra el texto */
+    text-align: center;
 }
 
 
@@ -324,17 +303,15 @@ h4 {
     text-align: center;
 }
 
-/* Fila con el titulo a un lado y la ilustracion al otro. */
 .portada-centro {
     display: flex;
-    flex-wrap: wrap;            /* en pantallas angostas la ilustracion baja debajo del titulo */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 36px;
     padding: 42px 0 32px;
 }
 
-/* El h1 general no se estira; solo dentro de la portada si. */
 h1 {
     flex: 0 1 auto;
 }
@@ -349,7 +326,7 @@ h1 {
 
 .portada-ilustracion {
     flex: 1 1 280px;
-    max-width: 340px;           /* tope de ancho para la ilustracion */
+    max-width: 340px;
 }
 
 .portada-inferior {
@@ -369,7 +346,7 @@ h1 {
 
 .portada-botones {
     display: flex;
-    flex-direction: column;     /* apila los hijos en vertical en vez de en fila */
+    flex-direction: column;
     align-items: center;
     gap: 16px;
 }
@@ -415,7 +392,6 @@ h1 {
     color: var(--texto);
 }
 
-/* Fila de tarjetas: se acomodan solas segun el espacio disponible. */
 .fila-destacados {
     display: flex;
     flex-wrap: wrap;
@@ -426,43 +402,40 @@ h1 {
 .tarjeta {
     display: flex;
     flex-direction: column;
-    flex: 1 1 280px;            /* ancho ideal 280px, crece y se encoge segun el espacio */
-    max-width: 380px;           /* pero nunca pasa de 380px */
+    flex: 1 1 280px;
+    max-width: 380px;
 }
 
-/* Es el "padre de referencia" para la etiqueta con position: absolute. */
 .tarjeta-imagen {
     position: relative;
 }
 
 .tarjeta-imagen img {
     height: 360px;
-    object-fit: cover;          /* recorta la imagen para llenar el espacio sin deformarla */
+    object-fit: cover;
 }
 
-/* Etiqueta flotante sobre la foto (cuando hay foto). */
 .etiqueta-tarjeta {
-    position: absolute;         /* se saca del flujo y se coloca respecto a .tarjeta-imagen */
+    position: absolute;
     top: 16px;
     left: 16px;
-    z-index: 1;                 /* la pone por encima de la imagen */
+    z-index: 1;
     padding: 5px 13px;
     background-color: var(--rosa-claro);
     border-radius: 999px;
     font-size: 12px;
 }
 
-/* Mientras no hay fotos, la etiqueta se muestra dentro del contenido. */
 .tarjeta-contenido > .etiqueta-tarjeta {
-    position: static;           /* vuelve al flujo normal */
-    align-self: flex-start;     /* se alinea a la izquierda dentro de la columna flex */
+    position: static;
+    align-self: flex-start;
     margin-bottom: 16px;
 }
 
 .tarjeta-contenido {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;               /* ocupa el espacio sobrante para que todas las tarjetas igualen altura */
+    flex-grow: 1;
     padding-top: 24px;
 }
 
@@ -478,13 +451,12 @@ h1 {
     font-size: 16px;
 }
 
-/* Fila inferior de la tarjeta: precio a la izquierda, boton a la derecha. */
 .tarjeta-pie {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    margin-top: auto;           /* pega el pie al fondo de la tarjeta */
+    margin-top: auto;
     padding-top: 18px;
     border-top: 1px solid var(--dorado);
 }
@@ -513,7 +485,6 @@ h1 {
     padding-bottom: 80px;
 }
 
-/* Dos columnas que pasan a una sola cuando falta espacio. */
 .dos-columnas {
     display: flex;
     flex-wrap: wrap;
@@ -522,7 +493,7 @@ h1 {
 }
 
 .dos-columnas > div {
-    flex: 1 1 300px;            /* cada columna mide al menos 300px antes de saltar de fila */
+    flex: 1 1 300px;
 }
 
 .eventos .columna-imagen img {
@@ -545,18 +516,18 @@ h1 {
 
 .lista-beneficios {
     margin: 28px 0;
-    padding-left: 20px;         /* espacio a la izquierda para las vinetas */
+    padding-left: 20px;
     color: var(--texto);
     font-size: 15px;
 }
 
 .lista-beneficios li {
     padding: 13px 0;
-    border-top: 1px solid var(--borde-suave);   /* linea separadora entre elementos */
+    border-top: 1px solid var(--borde-suave);
 }
 
 
-/* ---------- 5.4 Sucursales (tambien se usa en contacto.html) ---------- */
+/* ---------- 5.4 Sucursales ---------- */
 
 .sucursales {
     padding: 80px 0;
@@ -572,7 +543,7 @@ h1 {
 .tarjeta-sucursal {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;    /* en columna, alinea los hijos a la izquierda */
+    align-items: flex-start;
     flex: 1 1 300px;
     padding-top: 20px;
     border-top: 1px solid var(--dorado);
@@ -592,16 +563,14 @@ h1 {
 }
 
 .sucursal-horario strong {
-    font-weight: 400;           /* quita la negrita de <strong> */
+    font-weight: 400;
 }
 
 
 /* ==========================================================
    6. CATALOGO.HTML
-   Convencion BEM: bloque__elemento (catalogo__hero, catalogo__grid...)
    ========================================================== */
 
-/* Hero (encabezado) del catalogo. Tambien lo usa .portada-contacto en contacto.html. */
 .catalogo__hero,
 .portada-contacto {
     padding: 64px 0;
@@ -613,12 +582,11 @@ h1 {
 .catalogo__titulo,
 .portada-contacto h1 {
     max-width: 850px;
-    margin: 20px auto;          /* 20px arriba/abajo, auto a los lados = centrado */
+    margin: 20px auto;
     font-size: 3rem;
     letter-spacing: -1px;
 }
 
-/* Texto de introduccion. Tambien lo usa .descripcion-contacto. */
 .catalogo__intro,
 .descripcion-contacto {
     max-width: 650px;
@@ -627,7 +595,6 @@ h1 {
     font-size: 18px;
 }
 
-/* Indice de categorias (enlaces tipo pildora que saltan a cada seccion). */
 .catalogo__indice {
     margin-top: 36px;
 }
@@ -651,12 +618,10 @@ h1 {
     font-size: 14px;
 }
 
-/* Cada categoria de postres (tartas, individuales, especialidades, bebidas). */
 .catalogo__categoria {
     padding: 64px 0;
 }
 
-/* "+" = hermano adyacente: solo aplica a una categoria que va justo despues de otra. */
 .catalogo__categoria + .catalogo__categoria {
     border-top: 1px solid var(--borde-claro);
 }
@@ -677,7 +642,6 @@ h1 {
     color: var(--texto);
 }
 
-/* Cuadricula de productos hecha con Flexbox. */
 .catalogo__grid {
     display: flex;
     flex-wrap: wrap;
@@ -692,11 +656,10 @@ h1 {
     max-width: 384px;
     padding: 26px;
     border: 1px solid var(--borde-suave);
-    border-radius: 14px;                    /* esquinas redondeadas moderadas */
+    border-radius: 14px;
     background-color: var(--blanco);
 }
 
-/* Reglas listas para cuando se agreguen las fotografias reales. */
 .catalogo__producto-figura {
     margin: 0 0 24px;
 }
@@ -738,7 +701,6 @@ h1 {
     font-size: 16px;
 }
 
-/* Boton "Ordenar" de cada producto. */
 .catalogo__btn-accion {
     display: inline-block;
     position: relative;
@@ -758,7 +720,6 @@ h1 {
     top: -3px;
 }
 
-/* Llamado final a la accion. */
 .catalogo__cta {
     padding: 64px 0;
     background-color: var(--rosa-claro);
@@ -777,8 +738,6 @@ h1 {
 
 /* ==========================================================
    7. CONTACTO.HTML
-   (la portada .portada-contacto esta en la seccion 6, compartida
-   con .catalogo__hero; las sucursales estan en la seccion 5.4)
    ========================================================== */
 
 .acciones-contacto {
@@ -791,16 +750,15 @@ h1 {
 }
 
 .acciones-contacto .boton-mapa {
-    margin-top: 0;              /* anula el margin-top: auto del boton-mapa general */
+    margin-top: 0;
 }
 
 .seccion-contacto {
     padding: 64px 0;
 }
 
-/* Columnas: informacion a un lado y formulario al otro. */
 .seccion-contacto .dos-columnas {
-    align-items: flex-start;    /* alinea las columnas arriba en lugar de al centro */
+    align-items: flex-start;
     gap: 40px;
 }
 
@@ -835,7 +793,7 @@ h1 {
 }
 
 .lista-contacto strong {
-    color: var(--fucsia);       /* resalta las etiquetas (Telefono, Correo...) */
+    color: var(--fucsia);
 }
 
 .informacion-contacto h3 {
@@ -847,7 +805,6 @@ h1 {
     margin-top: 24px;
 }
 
-/* Caja rosada que contiene el formulario. */
 .contenedor-formulario {
     padding: 26px;
     background-color: var(--rosa-claro);
@@ -864,11 +821,11 @@ h1 {
 }
 
 .campo-formulario {
-    margin-bottom: 20px;        /* separa un campo del siguiente */
+    margin-bottom: 20px;
 }
 
 .campo-formulario label {
-    display: block;             /* la etiqueta ocupa su propia linea, encima del campo */
+    display: block;
     margin-bottom: 8px;
     color: var(--texto);
     font-family: var(--fuente-menu);
@@ -876,23 +833,21 @@ h1 {
     font-weight: 500;
 }
 
-/* Estilo comun para los tres tipos de campo. */
 .campo-formulario input,
 .campo-formulario select,
 .campo-formulario textarea {
     display: block;
-    width: 100%;                /* el campo llena todo el ancho disponible */
-    padding: 12px;              /* espacio interior para que el texto no toque el borde */
+    width: 100%;
+    padding: 12px;
     background-color: var(--blanco);
     color: var(--texto);
     border: 1px solid var(--rosa);
     border-radius: 8px;
-    font-family: Arial, sans-serif;     /* los campos no heredan la fuente; se define a mano */
-    font-size: 16px;                    /* 16px evita el zoom automatico en iPhone */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.5;
 }
 
-/* Al hacer clic o enfocar con teclado, el borde cambia a fucsia. */
 .campo-formulario input:focus-visible,
 .campo-formulario select:focus-visible,
 .campo-formulario textarea:focus-visible {
@@ -916,17 +871,13 @@ h1 {
     font-size: 16px;
 }
 
-/* Selector de atributo: aplica solo si el boton tiene el atributo "disabled". */
 .boton-enviar[disabled] {
-    opacity: 0.6;               /* 60% visible: se ve apagado */
+    opacity: 0.6;
 }
 
 
 /* ==========================================================
    8. SOBRENOSOTROS.HTML
-   Estas reglas dependen de la clase "pagina-nosotros" en el <body>
-   (ver nota al final del chat). Sirven para no afectar a las
-   tarjetas de index ni a las sucursales de contacto.
    ========================================================== */
 
 .pagina-nosotros .portada-centro {
@@ -934,7 +885,7 @@ h1 {
 }
 
 .pagina-nosotros .portada-centro h1 {
-    font-size: 3rem;            /* h1 mas pequeno que el de inicio (4rem) */
+    font-size: 3rem;
 }
 
 .pagina-nosotros .portada-inferior {
@@ -952,7 +903,6 @@ h1 {
     margin: 0 auto;
 }
 
-/* Seccion "Mision y vision": fondo rosa y tarjetas con borde. */
 .pagina-nosotros .destacados {
     padding: 64px 0;
     background-color: var(--rosa-claro);
@@ -966,7 +916,7 @@ h1 {
 }
 
 .pagina-nosotros .tarjeta-contenido {
-    padding-top: 0;             /* la tarjeta ya tiene su propio padding */
+    padding-top: 0;
 }
 
 .pagina-nosotros .tarjeta h3,
@@ -1005,88 +955,71 @@ h1 {
 }
 
 
- 
 /* ==========================================================
    9. BREAKPOINTS (diseno responsive)
-   ----------------------------------------------------------
-   @media (max-width: X) = las reglas de adentro solo se aplican cuando
-   el ancho de la pantalla es X o MENOR. Van al final del archivo para
-   que sobrescriban las reglas anteriores (misma especificidad = gana
-   la que esta mas abajo).
- 
-   Flexbox con flex-wrap ya acomoda columnas por si solo, por eso
-   aqui solo se ajustan tamanos de letra, espacios y alturas.
- 
-   Puntos de quiebre:
-   - 992px: tablet horizontal / laptop pequena
-   - 768px: tablet vertical
-   - 480px: celular
    ========================================================== */
- 
+
 /* ---------- Tablet horizontal (hasta 992px) ---------- */
 @media (max-width: 992px) {
- 
+
     h1 {
-        font-size: 3.2rem;                  /* 64px -> ~51px */
+        font-size: 3.2rem;
     }
- 
+
     h2 {
         font-size: 2.2rem;
     }
- 
+
     .destacados,
     .sucursales {
-        padding: 64px 0;                    /* menos espacio vertical entre secciones */
+        padding: 64px 0;
     }
- 
+
     .eventos .columna-imagen img {
-        height: 420px;                      /* imagen menos alta (antes 520px) */
+        height: 420px;
     }
- 
+
     .fila-pie {
         gap: 32px;
     }
 }
- 
+
 /* ---------- Tablet vertical (hasta 768px) ---------- */
 @media (max-width: 768px) {
- 
+
     h1 {
         font-size: 2.6rem;
         letter-spacing: -1px;
     }
- 
+
     h2 {
         font-size: 2rem;
     }
- 
-    /* Navegacion: logo arriba, menu y boton debajo, todo centrado. */
+
     .nav-container {
-        justify-content: center;            /* centra los elementos de la barra */
+        justify-content: center;
         gap: 12px;
     }
- 
+
     .nav-menu {
-        flex: 1 1 100%;                     /* el menu ocupa toda la fila */
-        order: 3;                           /* "order" cambia la posicion visual: pasa al final */
+        flex: 1 1 100%;
+        order: 3;
     }
- 
-    /* Portada */
+
     .portada-interior {
         padding-top: 32px;
     }
- 
+
     .portada-centro {
-        text-align: center;                 /* titulo centrado cuando la ilustracion baja */
+        text-align: center;
         gap: 24px;
     }
- 
+
     .portada-inferior {
         justify-content: center;
         text-align: center;
     }
- 
-    /* Secciones */
+
     .destacados,
     .sucursales,
     .seccion-contacto,
@@ -1094,99 +1027,95 @@ h1 {
     .catalogo__cta {
         padding: 48px 0;
     }
- 
+
     .eventos {
         padding-bottom: 48px;
     }
- 
+
     .dos-columnas {
         gap: 28px;
     }
- 
+
     .eventos .columna-imagen img {
         height: 340px;
     }
- 
+
     .tarjeta-imagen img {
         height: 300px;
     }
- 
-    /* Catalogo y contacto: titulos de hero mas pequenos */
+
     .catalogo__hero,
     .portada-contacto {
         padding: 48px 0;
     }
- 
+
     .catalogo__titulo,
     .portada-contacto h1 {
         font-size: 2.2rem;
     }
- 
+
     .catalogo__categoria-titulo,
     .catalogo__cta-titulo,
     .seccion-contacto h2 {
         font-size: 1.7rem;
     }
- 
-    /* Sobre nosotros */
+
     .pagina-nosotros .portada-centro h1 {
         font-size: 2.4rem;
     }
- 
+
     .pagina-nosotros .destacados,
     .historia-nosotros,
     .cierre-nosotros {
         padding: 48px 0;
     }
- 
-    /* Pie de pagina centrado */
+
     .fila-pie {
         text-align: center;
         justify-content: center;
     }
- 
+
     .columna-pie > p {
-        margin-left: auto;                  /* centra el parrafo (tiene max-width) */
+        margin-left: auto;
         margin-right: auto;
     }
 }
- 
+
 /* ---------- Celular (hasta 480px) ---------- */
 @media (max-width: 480px) {
- 
+
     body {
-        font-size: 16px;                    /* letra base un poco mas pequena */
+        font-size: 16px;
     }
- 
+
     .contenedor {
-        width: 92%;                         /* menos margen lateral para aprovechar el ancho */
+        width: 92%;
     }
- 
+
     h1 {
         font-size: 2.1rem;
     }
- 
+
     h2 {
         font-size: 1.7rem;
     }
- 
+
     h3 {
         font-size: 24px;
     }
- 
+
     .logo {
         width: 120px;
     }
- 
+
     .nav-menu {
         gap: 8px 16px;
     }
- 
+
     .nav-menu a {
         font-size: 15px;
     }
- 
-    /* Botones mas compactos y faciles de tocar */
+
     .cta-button,
     .boton-primario,
     .boton-whatsapp,
@@ -1194,54 +1123,51 @@ h1 {
     .boton-enviar {
         padding: 12px 22px;
     }
- 
+
     .portada-botones {
         width: 100%;
     }
- 
+
     .portada-inferior > p {
         font-size: 16px;
     }
- 
+
     .tarjeta-imagen img {
         height: 240px;
     }
- 
+
     .eventos .columna-imagen img {
         height: 260px;
     }
- 
-    /* Tarjetas del catalogo con menos relleno */
+
     .catalogo__producto-card,
     .pagina-nosotros .tarjeta {
         padding: 20px;
     }
- 
+
     .catalogo__producto-img {
         height: 200px;
     }
- 
+
     .catalogo__titulo,
     .portada-contacto h1 {
         font-size: 1.9rem;
     }
- 
+
     .catalogo__intro,
     .descripcion-contacto {
         font-size: 16px;
     }
- 
-    /* Formulario */
+
     .contenedor-formulario {
         padding: 18px;
     }
- 
+
     .pagina-nosotros .portada-centro h1 {
         font-size: 2rem;
     }
- 
+
     .pie-derechos {
         padding: 16px;
     }
 }
- 
